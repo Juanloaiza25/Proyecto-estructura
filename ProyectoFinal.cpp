@@ -1,17 +1,22 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+/*Declaracion de numeradores*/
+
 enum TipoVuelo{Nacional, Internacional};
 enum ClaseTiquete{Economica, PrimeraClase};
 enum Genero{Masculino, Femenino, Otro, NoEspecificado};
 enum Meses{Enero=1, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre};
 
+/*Estructura de fecha*/
 
 struct Fecha{
     int dia;
     Meses mes;
     int anio;
 };
+
+/*Estructura pasajeros*/
 
 typedef struct nodo_pasajero{
     char *documento;
@@ -23,6 +28,8 @@ typedef struct nodo_pasajero{
 
     struct nodo_pasajero *siguiente;
 } NodoPas;
+
+/*Estructura de los vuelos*/
 
 typedef struct nodo_vuelo{
     int tipo_vuelo;
@@ -36,6 +43,8 @@ typedef struct nodo_vuelo{
     int sillas_totales;
     struct nodo_vuelo *siguiente;
 } NodoVuelo;
+
+/*Estructura de los tiquetes*/
 
 typedef struct nodo_tiquete{
     char *clase_tiquete;
